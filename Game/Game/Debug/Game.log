@@ -1,14 +1,21 @@
-﻿Build started 02/12/2015 01:00:51.
-     1>Project "D:\Documents\GitHub\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
+﻿Build started 02/12/2015 02:21:46.
+     1>Project "C:\Users\Rafael\Desktop\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Visual Studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         D:\Visual Studio\VC\bin\CL.exe /c /IC:\Users\Rafael\Desktop\Game\packages\glm.0.9.7.1\build\native\../..//build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Core\GameModels.cpp Managers\Shader_Manager.cpp main.cpp
+         Shader_Manager.cpp
+         GameModels.cpp
+         Generating Code...
+         Compiling...
          main.cpp
+     1>c:\users\rafael\desktop\game\game\main.cpp(22): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+         Generating Code...
        Link:
-         D:\Visual Studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Documents\GitHub\Game\Debug\Game.exe" /INCREMENTAL /NOLOGO /LIBPATH:Dependencies\freeglut /LIBPATH:Dependencies\glew opengl32.lib freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Documents\GitHub\Game\Debug\Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Documents\GitHub\Game\Debug\Game.lib" /MACHINE:X86 Debug\Shader_Loader.obj
+         D:\Visual Studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Rafael\Desktop\Game\Debug\Game.exe" /INCREMENTAL /NOLOGO /LIBPATH:Dependencies\freeglut /LIBPATH:Dependencies\glew opengl32.lib freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Rafael\Desktop\Game\Debug\Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Rafael\Desktop\Game\Debug\Game.lib" /MACHINE:X86 Debug\GameModels.obj
          Debug\main.obj
-         Game.vcxproj -> D:\Documents\GitHub\Game\Debug\Game.exe
-     1>Done Building Project "D:\Documents\GitHub\Game\Game\Game.vcxproj" (Build target(s)).
+         Debug\Shader_Manager.obj
+         Game.vcxproj -> C:\Users\Rafael\Desktop\Game\Debug\Game.exe
+     1>Done Building Project "C:\Users\Rafael\Desktop\Game\Game\Game.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.95
+Time Elapsed 00:00:02.65

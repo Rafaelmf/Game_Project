@@ -1,62 +1,88 @@
-#include <iostream>
+
+#include "Managers\Shader_Manager.h"
+#include "Core\GameModels.h"
+#include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
 #include<fstream>
 #include<vector>
+#include<string>
+#include<map>
 
-#include "Core/Shader_Loader.h"
- 
-using namespace Core;
+#include <iostream>
 
-GLuint vertex_shader, fragment_shader, program;
-GLuint vertex_array_object;
+Models::GameModels* gameModels;
+Managers::Shader_Manager* shaderLoader;
+GLuint program;
+GLint totalm;
 
 void renderScene(void) {
- 
-   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-   glClearColor(1.0, 0.0, 0.0, 1.0);//clear red
- 
-   //use the created program
-   glUseProgram(program);
-   
-   //draw 3 vertices as triangles
-   glDrawArrays(GL_TRIANGLES, 0, 24);
-   glutSwapBuffers();
 
-   
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glClearColor(0.0, 0.3, 0.3, 1.0);
+	glBindVertexArray(gameModels->GetModel("triangle1"));
+	glUseProgram(program);
+	
+	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glutSwapBuffers();
+}
+
+void closeCallback(){
+
+	std::cout << "GLUT:\t Finished" << std::endl;
+	glutLeaveMainLoop();
 }
 
 void Init(){
+
 	glEnable(GL_DEPTH_TEST);
 
+	gameModels = new Models::GameModels();
+	gameModels->CreateTriangleModel("triangle1");
 	//load and compile shaders
-	Core::Shader_Loader sh=Core::Shader_Loader::Shader_Loader();
-	program=sh.CreateProgram("Shaders\\Vertex_Shader.glsl","Shaders\\Fragment_Shader.glsl");
+	shaderLoader = new Managers::Shader_Manager();
+	shaderLoader->CreateProgram("colorShader","Shaders\\Vertex_Shader.glsl",
+											 "Shaders\\Fragment_Shader.glsl");
+	program = Managers::Shader_Manager::GetShader("colorShader");
 
-	//generate the vertex array
-	glGenVertexArrays(1, &vertex_array_object);
-	glBindVertexArray(vertex_array_object);
-
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	
 }
 
+
 int main(int argc, char **argv) {
- 
+
+	
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowPosition(100, 100);
+    glutInitWindowPosition(500, 500);
 	glutInitWindowSize(800, 600);
-	glutCreateWindow("Drawing my first triangle");
- 
+	
+	glutInitContextVersion(4, 5);
+	glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
+
+
+	glutCreateWindow("OpenGL First Window");
+	//auto c = glGetError();
+	glewExperimental = true;
 	glewInit();
 	
+	
+	if (glewIsSupported("GL_VERSION_4_5"))
+	{
+		std::cout << " OpenGL Version is 4.5\n ";
+	}
+	else
+	{
+		std::cout << "OpenGL 4.4 not supported\n ";
+	}
+	
 	Init();
-
 	// register callbacks
 	glutDisplayFunc(renderScene);
- 
+	glutCloseFunc(closeCallback);
 	glutMainLoop();
- 
+	
+	delete gameModels;
+	delete shaderLoader;
+
 	return 0;
 }

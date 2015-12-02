@@ -66,13 +66,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Shader_Loader.cpp" />
+    <ClCompile Include="Core\GameModels.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Managers\Shader_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Shader_Loader.h" />
+    <ClInclude Include="Core\GameModels.h" />
+    <ClInclude Include="Core\VertexFormat.h" />
+    <ClInclude Include="Managers\Shader_Manager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\glm.0.9.7.1\build\native\glm.targets" Condition="Exists('..\packages\glm.0.9.7.1\build\native\glm.targets')" />
   </ImportGroup>
 </Project>
