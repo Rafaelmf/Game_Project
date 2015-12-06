@@ -1,157 +1,20 @@
-﻿Build started 06/12/2015 14:13:29.
+﻿Build started 03/12/2015 21:18:58.
      1>Project "C:\Users\Rafael\Desktop\Game_Project\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Visual Studio\VC\bin\CL.exe /c /IC:\Users\Rafael\Desktop\Game_Project\Game\packages\glm.0.9.7.1\build\native\../..//build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Core\Init\Init_GLEW.cpp Core\Init\Init_GLUT.cpp Managers\Models_Manager.cpp Managers\Scene_Manager.cpp main.cpp Managers\Shader_Manager.cpp Rendering\Models\Model.cpp Rendering\Models\Quad.cpp Rendering\Models\Triangle.cpp
-         Triangle.cpp
-         Quad.cpp
-         Model.cpp
-         Shader_Manager.cpp
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)' : could not deduce template argument for 'const std::vector<_Ty,_Alloc> &' from 'const std::string'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xstddef(179) : while compiling class template member function 'bool std::less<_Ty>::operator ()(const _Ty &,const _Ty &) const'
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 d:\visual studio\vc\include\map(194) : see reference to function template instantiation 'bool std::less<_Ty>::operator ()(const _Ty &,const _Ty &) const' being compiled
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 d:\visual studio\vc\include\type_traits(743) : see reference to class template instantiation 'std::less<_Ty>' being compiled
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 d:\visual studio\vc\include\xtree(1028) : see reference to class template instantiation 'std::is_empty<_Ty>' being compiled
-                 with
-                 [
-                     _Ty=std::less<std::string>
-                 ]
-                 d:\visual studio\vc\include\map(67) : see reference to class template instantiation 'std::_Tree<_Traits>' being compiled
-                 with
-                 [
-                     _Traits=std::_Tmap_traits<std::string,GLuint,std::less<std::string>,std::allocator<std::pair<const std::string,GLuint>>,false>
-                 ]
-                 c:\users\rafael\desktop\game_project\game\game\managers\shader_manager.h(33) : see reference to class template instantiation 'std::map<_Kty,_Ty>' being compiled
-                 with
-                 [
-                     _Kty=std::string,
-                     _Ty=GLuint
-                 ]
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::_Tree<_Traits> &,const std::_Tree<_Traits> &)' : could not deduce template argument for 'const std::_Tree<_Traits> &' from 'const std::string'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::move_iterator<_RanIt> &,const std::move_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'const std::string'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::reverse_iterator<_RanIt> &,const std::reverse_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'const std::string'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::_Revranit<_RanIt,_Base> &,const std::_Revranit<_RanIt2,_Base2> &)' : could not deduce template argument for 'const std::_Revranit<_RanIt,_Base> &' from 'const std::string'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)' : could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'const std::string'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2676: binary '<' : 'const std::string' does not define this operator or a conversion to a type acceptable to the predefined operator
-         main.cpp
-     1>c:\users\rafael\desktop\game_project\game\game\main.cpp(13): error C2039: 'init' : is not a member of 'Core::Init::Init_GLUT'
-                 c:\users\rafael\desktop\game_project\game\game\core\init\init_glut.h(15) : see declaration of 'Core::Init::Init_GLUT'
-     1>c:\users\rafael\desktop\game_project\game\game\main.cpp(13): error C3861: 'init': identifier not found
-     1>c:\users\rafael\desktop\game_project\game\game\main.cpp(16): error C2039: 'setListener' : is not a member of 'Core::Init::Init_GLUT'
-                 c:\users\rafael\desktop\game_project\game\game\core\init\init_glut.h(15) : see declaration of 'Core::Init::Init_GLUT'
-     1>c:\users\rafael\desktop\game_project\game\game\main.cpp(16): error C3861: 'setListener': identifier not found
-     1>c:\users\rafael\desktop\game_project\game\game\main.cpp(18): error C2039: 'run' : is not a member of 'Core::Init::Init_GLUT'
-                 c:\users\rafael\desktop\game_project\game\game\core\init\init_glut.h(15) : see declaration of 'Core::Init::Init_GLUT'
-     1>c:\users\rafael\desktop\game_project\game\game\main.cpp(18): error C3861: 'run': identifier not found
-         Scene_Manager.cpp
-         Models_Manager.cpp
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::_Tree<_Traits> &,const std::_Tree<_Traits> &)' : could not deduce template argument for 'const std::_Tree<_Traits> &' from 'const std::string'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xstddef(179) : while compiling class template member function 'bool std::less<_Ty>::operator ()(const _Ty &,const _Ty &) const'
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 d:\visual studio\vc\include\map(177) : see reference to function template instantiation 'bool std::less<_Ty>::operator ()(const _Ty &,const _Ty &) const' being compiled
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 d:\visual studio\vc\include\type_traits(743) : see reference to class template instantiation 'std::less<_Ty>' being compiled
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 d:\visual studio\vc\include\xtree(1028) : see reference to class template instantiation 'std::is_empty<_Ty>' being compiled
-                 with
-                 [
-                     _Ty=std::less<std::string>
-                 ]
-                 d:\visual studio\vc\include\map(67) : see reference to class template instantiation 'std::_Tree<_Traits>' being compiled
-                 with
-                 [
-                     _Traits=std::_Tmap_traits<std::string,GLuint,std::less<std::string>,std::allocator<std::pair<const std::string,GLuint>>,false>
-                 ]
-                 c:\users\rafael\desktop\game_project\game\game\managers\shader_manager.h(33) : see reference to class template instantiation 'std::map<_Kty,_Ty>' being compiled
-                 with
-                 [
-                     _Kty=std::string,
-                     _Ty=GLuint
-                 ]
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xtree(2245) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)' : could not deduce template argument for 'const std::vector<_Ty,_Alloc> &' from 'const std::string'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\vector(1726) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)' : could not deduce template argument for 'const std::list<_Ty,_Alloc> &' from 'const std::string'
-                 d:\visual studio\vc\include\list(2002) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\list(2002) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\list(2002) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\list(2002) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::move_iterator<_RanIt> &,const std::move_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'const std::string'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1983) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::reverse_iterator<_RanIt> &,const std::reverse_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'const std::string'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1259) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::_Revranit<_RanIt,_Base> &,const std::_Revranit<_RanIt2,_Base2> &)' : could not deduce template argument for 'const std::_Revranit<_RanIt,_Base> &' from 'const std::string'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\xutility(1075) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)' : could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'const std::string'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-                 d:\visual studio\vc\include\utility(232) : see declaration of 'std::operator <'
-     1>d:\visual studio\vc\include\xstddef(180): error C2676: binary '<' : 'const std::string' does not define this operator or a conversion to a type acceptable to the predefined operator
+         D:\Visual Studio\VC\bin\CL.exe /c /IC:\Users\Rafael\Desktop\Game_Project\Game\packages\glm.0.9.7.1\build\native\../..//build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Core\Init\Init_GLUT.cpp
          Init_GLUT.cpp
-         Init_GLEW.cpp
-         Generating Code...
-     1>Done Building Project "C:\Users\Rafael\Desktop\Game_Project\Game\Game\Game.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         D:\Visual Studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Rafael\Desktop\Game_Project\Game\Debug\Game.exe" /INCREMENTAL /NOLOGO /LIBPATH:Dependencies\freeglut /LIBPATH:Dependencies\glew opengl32.lib freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Rafael\Desktop\Game_Project\Game\Debug\Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Rafael\Desktop\Game_Project\Game\Debug\Game.lib" /MACHINE:X86 Debug\Init_GLEW.obj
+         Debug\Init_GLUT.obj
+         Debug\Models_Manager.obj
+         Debug\Scene_Manager.obj
+         Debug\main.obj
+         Debug\Shader_Manager.obj
+         Debug\Model.obj
+         Debug\Triangle.obj
+         Game.vcxproj -> C:\Users\Rafael\Desktop\Game_Project\Game\Debug\Game.exe
+     1>Done Building Project "C:\Users\Rafael\Desktop\Game_Project\Game\Game\Game.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:09.73
+Time Elapsed 00:00:01.08

@@ -6,8 +6,7 @@ std::map<std::string, GLuint> Shader_Manager::programs;
 
 Shader_Manager::Shader_Manager(void){}
 
-Shader_Manager::~Shader_Manager(void)
-{
+Shader_Manager::~Shader_Manager(void){
 
 	for (std::map<std::string, GLuint>::iterator i = programs.begin();
 		i != programs.end(); ++i)
@@ -18,8 +17,7 @@ Shader_Manager::~Shader_Manager(void)
 	programs.clear();
 }
 
-std::string Shader_Manager::ReadShader(const std::string& filename)
-{
+std::string Shader_Manager::ReadShader(const std::string& filename){
 
 	std::string shaderCode;
 	std::ifstream file(filename, std::ios::in);
@@ -38,8 +36,7 @@ std::string Shader_Manager::ReadShader(const std::string& filename)
 	return shaderCode;
 }
 
-GLuint Shader_Manager::CreateShader(GLenum shaderType, const std::string& source, const std::string& shaderName)
-{
+GLuint Shader_Manager::CreateShader(GLenum shaderType, const std::string& source, const std::string& shaderName){
 
 	int compile_result = 0;
 
@@ -52,8 +49,7 @@ GLuint Shader_Manager::CreateShader(GLenum shaderType, const std::string& source
 	glGetShaderiv(shader, GL_COMPILE_STATUS, &compile_result);
 
 	//daca exista erori output la consola
-	if (compile_result == GL_FALSE)
-	{
+	if (compile_result == GL_FALSE){
 
 		int info_log_length = 0;
 		glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &info_log_length);
@@ -66,8 +62,7 @@ GLuint Shader_Manager::CreateShader(GLenum shaderType, const std::string& source
 
 }
 
-void Shader_Manager::CreateProgram(const std::string& shaderName, const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename)
-{
+void Shader_Manager::CreateProgram(const std::string& shaderName, const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename){
 
 	//read the shader files and save the code
 	std::string vertex_shader_code = ReadShader(vertexShaderFilename);
@@ -85,8 +80,7 @@ void Shader_Manager::CreateProgram(const std::string& shaderName, const std::str
 	glLinkProgram(program);
 	glGetProgramiv(program, GL_LINK_STATUS, &link_result);
 
-	if (link_result == GL_FALSE)
-	{
+	if (link_result == GL_FALSE){
 
 		int info_log_length = 0;
 		glGetProgramiv(program, GL_INFO_LOG_LENGTH, &info_log_length);
@@ -95,12 +89,10 @@ void Shader_Manager::CreateProgram(const std::string& shaderName, const std::str
 		std::cout << "Shader Loader : LINK ERROR" << std::endl << &program_log[0] << std::endl;
 		return;
 	}
-
 	programs[shaderName] = program;
 }
 
-const GLuint Shader_Manager::GetShader(const std::string& shaderName)
-{
+const GLuint Shader_Manager::GetShader(const std::string& shaderName) {
 
 	return programs.at(shaderName);
 
