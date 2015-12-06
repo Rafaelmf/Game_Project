@@ -73,6 +73,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Managers\Shader_Manager.cpp" />
     <ClCompile Include="Rendering\Models\Model.cpp" />
+    <ClCompile Include="Rendering\Models\Quadcpp.cpp" />
     <ClCompile Include="Rendering\Models\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +89,7 @@
     <ClInclude Include="Managers\Shader_Manager.h" />
     <ClInclude Include="Rendering\IGameObject.h" />
     <ClInclude Include="Rendering\Models\Model.h" />
+    <ClInclude Include="Rendering\Models\Quad.h" />
     <ClInclude Include="Rendering\Models\Triangle.h" />
   </ItemGroup>
   <ItemGroup>
