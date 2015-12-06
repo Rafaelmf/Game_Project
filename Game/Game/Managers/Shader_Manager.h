@@ -2,13 +2,15 @@
 #include <fstream>
 #include <iostream>
 #include <map>
-#include<string>
 #include <vector>
 #include "../Dependencies/glew/glew.h"
 #include "../Dependencies/freeglut/freeglut.h"
-namespace Managers{
 
-	class Shader_Manager{
+namespace Managers
+{
+
+	class Shader_Manager
+	{
 
 	public:
 
